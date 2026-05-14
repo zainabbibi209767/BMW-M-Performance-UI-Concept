@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW | The Ultimate Machine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html { height: 100vh; overflow: hidden; font-family: 'Poppins', sans-serif; background: #0a0a0a; }
+
+        .bmw-wrapper {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Background Road View */
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=2000') no-repeat center center/cover;
+            padding: 20px;
+        }
+
+        .main-card {
+            width: 95%;
+            max-width: 1150px;
+            height: 80vh;
+            background: linear-gradient(135deg, #111 0%, #000 100%);
+            border-radius: 40px;
+            display: flex;
+            box-shadow: 0 50px 100px rgba(0, 102, 255, 0.3);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        /* Left Side: Text Content */
+        .info-panel {
+            flex: 1;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 5;
+        }
+
+        .m-logo {
+            font-family: 'Orbitron', sans-serif;
+            color: #0066ff;
+            letter-spacing: 8px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 5rem;
+            line-height: 0.9;
+            color: #fff;
+            margin-bottom: 25px;
+            text-shadow: 5px 5px 0px #0066ff;
+        }
+
+        p {
+            color: #888;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            max-width: 400px;
+        }
+
+        .btn-drive {
+            padding: 20px 45px;
+            background: #0066ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.4s;
+            width: fit-content;
+            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.5);
+        }
+
+        .btn-drive:hover {
+            background: #fff;
+            color: #0066ff;
+            transform: scale(1.1);
+        }
+
+        /* Right Side: Car Image */
+        .visual-panel {
+            flex: 1.5;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .car-photo {
+            width: 140%; /* Making car pop out */
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=2070') no-repeat center center/cover;
+            transition: 1s ease-in-out;
+            mask-image: linear-gradient(to left, black 80%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to left, black 80%, transparent 100%);
+        }
+
+        .main-card:hover .car-photo {
+            transform: scale(1.1) translateX(-30px);
+        }
+
+        /* Decorative Stripe */
+        .m-stripes {
+            position: absolute;
+            top: 0;
+            right: 50px;
+            height: 100%;
+            width: 15px;
+            background: repeating-linear-gradient(
+                #0066ff, #0066ff 33%, 
+                #ff0000 33%, #ff0000 66%, 
+                #212121 66%, #212121 100%
+            );
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bmw-wrapper">
+        <div class="main-card">
+            <div class="m-stripes"></div>
+
+            <div class="info-panel">
+                <span class="m-logo">/// M PERFORMANCE</span>
+                <h1>THE <br>ULTIMATE</h1>
+                <p>Unleash the power of German engineering. More speed, more control, more soul. Experience the M-Series today.</p>
+                <a href="#" class="btn-drive">Drive Now</a>
+            </div>
+
+            <div class="visual-panel">
+                <div class="car-photo"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
